@@ -1,0 +1,24 @@
+div {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border: 1px solid #000;
+  margin: 1px;
+  float: left;
+}
+
+#canvas {
+  height: 600px;
+  width: 800px;
+}
+
+.pixelRow {
+  box-sizing: border-box;
+  display: block;
+  height: auto;
+  width: auto;
+  border: 0;
+  margin: 0;
+  clear: both;
+}
