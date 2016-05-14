@@ -23,7 +23,23 @@
   display: inline-block;
   height: 25px;
   width: 25px;
-  border: 1px solid #778899;
+  border: 1px solid #F1F1F3;
   margin: 0;
   float: left;
+}
+
+#palette {
+  position: relative;
+  width: 800px;
+  height: 115px;
+  margin: 0 auto;
+  top: 175px;
+}
+
+.paint {
+  height: 50px;
+  width: 50px;
+  border-radius: 20%;
+  margin: 3px;
+  display: inline-block;;
 }

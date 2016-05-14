@@ -17,7 +17,6 @@ var drawCanvas = function (width, height) {
       pixel.addEventListener('click', function(event) {
         event.target.className += ' red';
       });
-
     }
   }
 
