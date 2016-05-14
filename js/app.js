@@ -16,8 +16,11 @@ var drawCanvas = function (width, height) {
       pixel.className = 'pixel';
       pixelRow.appendChild(pixel);
       pixel.addEventListener('click', function(event) {
-        // event.target.className += ' red';
-        event.target.className += ' ' + brushColor;
+        if (event.target.className.length > 5) {
+          event.target.className = 'pixel ' + brushColor;
+        } else {
+          event.target.className += ' ' + brushColor;
+        }
       });
     }
   }
