@@ -3,7 +3,61 @@
   border-color: red;
 }
 
+.brown {
+  background-color: brown;
+  border-color: brown;
+}
+
+.orange {
+  background-color: orange;
+  border-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+  border-color: yellow;
+}
+
+.green {
+  background-color: green;
+  border-color: green;
+}
+
 .blue {
   background-color: blue;
   border-color: blue;
+}
+
+.indigo {
+  background-color: indigo;
+  border-color: indigo;
+}
+
+.violet {
+  background-color: violet;
+  border-color: violet;
+}
+
+.grey {
+  background-color: grey;
+  border-color: grey;
+}
+
+.black {
+  background-color: black;
+  border-color: black;
+}
+
+.white {
+  background-color: white;
+  border-color: white;
+}
+
+.erase {
+  background-color: white;
+  border-color: 0;
+}
+
+.current {
+  
 }
