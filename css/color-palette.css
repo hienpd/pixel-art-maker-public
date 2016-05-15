@@ -53,6 +53,16 @@
   border-color: white;
 }
 
+.lightblue {
+  background-color: lightblue;
+  border-color: lightblue;
+}
+
+.lightgreen {
+  background-color: lightgreen;
+  border-color: lightgreen;
+}
+
 .erase {
   background-color: white;
 }

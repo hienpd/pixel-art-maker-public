@@ -14,26 +14,32 @@
     <div id="canvas"></div>
     <div id="palette">
       <div class="paletteCurrent">
-        <div class="color shadow current"></div>
+        <div class="color shadow current" title="Current Brush Color"></div>
       </div>
       <div class="paletteRows">
         <div class="paletteRow">
-          <div class="color shadow black"></div>
-          <div class="color shadow white"></div>
-          <div class="color shadow grey"></div>
-          <div class="color shadow red"></div>
-          <div class="color shadow orange"></div>
-          <div class="color shadow yellow"></div>
+          <div class="color shadow red" title="Red"></div>
+          <div class="color shadow orange" title="Orange"></div>
+          <div class="color shadow yellow" title="Yellow"></div>
+          <div class="color shadow green" title="Green"></div>
+          <div class="color shadow blue" title="Blue"></div>
+          <div class="color shadow indigo" title="Indigo"></div>
+          <div class="color shadow white" title="White"></div>
         </div>
         <div class="paletteRow">
-          <div class="color shadow green"></div>
-          <div class="color shadow blue"></div>
-          <div class="color shadow indigo"></div>
-          <div class="color shadow violet"></div>
-          <div class="color shadow brown"></div>
-          <div class="color shadow erase"></div>
+          <div class="color shadow violet" title="Violet"></div>
+          <div class="color shadow brown" title="Brown"></div>
+          <div class="color shadow grey" title="Grey"></div>
+          <div class="color shadow lightgreen" title="Light Green"></div>
+          <div class="color shadow lightblue" title="Light Blue"></div>
+          <div class="color shadow black" title="Black"></div>
+          <div class="color gridbg erase" title="Erase"></div>
         </div>
       </div>
+        <div class="paletteCustom">
+          <p>Custom color:</p>
+          <input type="color">
+        </div>
     </div>
     <script src="js/app.js"></script>
   </body>

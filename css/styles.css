@@ -1,13 +1,18 @@
 /* General */
 
-/*header {
-  width: 800px;
-  margin: 50px auto;
-}*/
+body {
+  font-family: sans-serif;
+  font-size: 0.90em;
+}
+
+p {
+  color: grey;
+  margin: 2px 0 5px 0;
+}
 
 h1 {
   font-family: 'VT323', sans-serif;
-  font-size: 5em;
+  font-size: 3em;
   color: grey;
   text-align: center;
 }
@@ -16,8 +21,8 @@ h1 {
 
 #canvas {
   display: block;
-  height: 600px;
-  width: 800px;
+  height: 450px;
+  width: 825px;
   margin: 0 auto;
   position: relative;
 }
@@ -36,8 +41,8 @@ h1 {
 .pixel {
   box-sizing: border-box;
   display: inline-block;
-  height: 25px;
-  width: 25px;
+  height: 15px;
+  width: 15px;
   border: 1px solid #F1F1F3;
   margin: 0;
   float: left;
@@ -46,11 +51,11 @@ h1 {
 /* Color Palette */
 
 .color {
-  height: 50px;
-  width: 50px;
+  height: 25px;
+  width: 25px;
   border-radius: 20%;
   border: 1px solid #F1F1F3;
-  margin: 3px;
+  margin: 1px;
   display: inline-block;;
 }
 
@@ -59,8 +64,8 @@ h1 {
 }
 
 .current {
-  height: 115px;
-  width: 115px;
+  height: 60px;
+  width: 60px;
   margin-right: 5px;
 }
 
@@ -70,10 +75,10 @@ h1 {
 
 #palette {
   position: relative;
-  width: 800px;
-  height: 115px;
+  width: 500px;
+  height: 75px;
   margin: 0 auto;
-  top: 50px;
+  top: 25px;
 }
 
 .paletteCurrent {
@@ -82,12 +87,22 @@ h1 {
 }
 
 .paletteRows {
-  width: 400px;
+  width: 250px;
   float: left;
   display: inline-block;
 }
 
 .paletteRow {
-  width: 400px;
   display: inline-block;
+}
+
+.paletteCustom {
+  display: inline-block;
+  float: left;
+}
+
+.gridbg {
+  box-shadow: 2px 2px #E5E5E7, 0 0 1em #E5E5E7;
+  background-image: url(../gridbg.png);
+  background-size: 10px
 }

@@ -33,12 +33,14 @@ var colorPicker = function () {
   for (var i = 0; i < color.length; i++) {
     color[i].addEventListener('click', function(event) {
     brushColor = event.target.className.slice(13);
-    currentColor.className = 'color current shadow ' + brushColor;
+    if (brushColor === 'erase') {
+      currentColor.className = 'color current gridbg ' + brushColor;
+    } else {
+      currentColor.className = 'color current shadow ' + brushColor;
+      }
     });
   }
 };
 
-/* Show the current brush color on the palette. */
-
-drawCanvas(32, 24);
+drawCanvas(55, 30);
 colorPicker();
