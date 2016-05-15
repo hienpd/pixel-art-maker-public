@@ -7,7 +7,7 @@ currentColor.className = 'color current gridbg ' + brushColor;
 var shouldDraw = null;
 
 
-/* Draw the canvas based on the height and width given. Height determines the number of rows. Width determines how many pixels to put in each row. Add event listeners to each pixel. Toggle between colorPicker palette (true) and customPicker (false). */
+/* Draw the canvas based on the height and width given. Height determines the number of rows. Width determines how many pixels to put in each row. Add event listeners to each pixel. Toggle between colorPicker palette (true) and customPicker (false). Add events for painting on mousedown and enter, using shouldDraw as a toggle. */
 
 var drawCanvas = function (width, height) {
   for (var row = 0; row < height; row++) {
@@ -56,9 +56,7 @@ var drawCanvas = function (width, height) {
             break;
           }
         }
-      }, false);
-
-
+      });
     }
   }
 };
