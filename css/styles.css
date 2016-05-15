@@ -1,10 +1,25 @@
+/* General */
+
+/*header {
+  width: 800px;
+  margin: 50px auto;
+}*/
+
+h1 {
+  font-family: 'VT323', sans-serif;
+  font-size: 5em;
+  color: grey;
+  text-align: center;
+}
+
+/* Drawing Canvas */
+
 #canvas {
   display: block;
   height: 600px;
   width: 800px;
   margin: 0 auto;
   position: relative;
-  top: 150px;
 }
 
 .pixelRow {
@@ -28,13 +43,7 @@
   float: left;
 }
 
-#palette {
-  position: relative;
-  width: 800px;
-  height: 115px;
-  margin: 0 auto;
-  top: 175px;
-}
+/* Color Palette */
 
 .color {
   height: 50px;
@@ -43,4 +52,42 @@
   border: 1px solid #F1F1F3;
   margin: 3px;
   display: inline-block;;
+}
+
+.shadow {
+  box-shadow: 2px 2px #E5E5E7, 0 0 1em #E5E5E7;
+}
+
+.current {
+  height: 115px;
+  width: 115px;
+  margin-right: 5px;
+}
+
+.whiteBorder {
+  border: none;
+}
+
+#palette {
+  position: relative;
+  width: 800px;
+  height: 115px;
+  margin: 0 auto;
+  top: 50px;
+}
+
+.paletteCurrent {
+  display: inline-block;
+  float: left;
+}
+
+.paletteRows {
+  width: 400px;
+  float: left;
+  display: inline-block;
+}
+
+.paletteRow {
+  width: 400px;
+  display: inline-block;
 }

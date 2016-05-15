@@ -24,16 +24,16 @@ var drawCanvas = function (width, height) {
   }
 };
 
-/* Allow user to pick a color. Clicking on a color saves the class name. Add event listeners to all the color panels on the palette except the last one, which is the current color indicator. Add brush color class to indicator. */
+/* Allow user to pick a color. Clicking on a color saves the class name. Add event listeners to all the color panels. Add brush color class to indicator. */
 
 var colorPicker = function () {
   var palette = document.getElementById('palette');
   var color = palette.getElementsByClassName('color');
   var currentColor = document.getElementsByClassName('current')[0];
-  for (var i = 0; i < color.length - 1; i++) {
+  for (var i = 0; i < color.length; i++) {
     color[i].addEventListener('click', function(event) {
-    brushColor = event.target.className.slice(6);
-    currentColor.className = 'color current ' + brushColor;
+    brushColor = event.target.className.slice(13);
+    currentColor.className = 'color current shadow ' + brushColor;
     });
   }
 };
