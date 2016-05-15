@@ -1,8 +1,9 @@
-var brushColor;
+var brushColor = 'erase';
 var customColor = '';
 var toggle = true;
 var canvas = document.getElementById('canvas');
 var currentColor = document.getElementsByClassName('current')[0];
+currentColor.className = 'color current gridbg ' + brushColor;
 
 /* Draw the canvas based on the height and width given. Height determines the number of rows. Width determines how many pixels to put in each row. Add event listeners to each pixel. Toggle between colorPicker palette (true) and customPicker (false). */
 
@@ -16,21 +17,18 @@ var drawCanvas = function (width, height) {
       var pixel = document.createElement('div');
       pixel.className = 'pixel';
       pixelRow.appendChild(pixel);
-      pixel.addEventListener('click', function(event) {
+      pixel.addEventListener('mousedown', function(event) {
 
         switch (toggle) {
+          case true:
+            event.target.className = 'pixel ' + brushColor;
+            event.target.removeAttribute('style');
+            break;
           case false:
             event.target.className = 'pixel';
             event.target.style.backgroundColor = customColor;
             event.target.style.borderColor = customColor;
             break;
-          case true:
-            if (event.target.className.length > 5) {
-              event.target.className = 'pixel ' + brushColor;
-            } else {
-              event.target.removeAttribute('style');
-              event.target.className += ' ' + brushColor;
-            }
         }
       });
     }
@@ -44,24 +42,23 @@ var colorPicker = function () {
   var color = palette.getElementsByClassName('color');
   for (var i = 0; i < color.length; i++) {
     color[i].addEventListener('click', function(event) {
-    brushColor = event.target.className.slice(13);
-    currentColor.removeAttribute('style');
-    toggle = true;
-    if (brushColor === 'erase') {
-      currentColor.className = 'color current gridbg ' + brushColor;
-    } else {
-      currentColor.className = 'color current shadow ' + brushColor;
+      brushColor = event.target.className.slice(13);
+      toggle = true;
+      currentColor.removeAttribute('style');
+      if (brushColor === 'erase') {
+        currentColor.className = 'color current gridbg ' + brushColor;
+      } else {
+        currentColor.className = 'color current shadow ' + brushColor;
       }
     });
   }
 };
 
 var customPicker = function (event) {
+  toggle = false;
   customColor = event.target.value;
-
   currentColor.className = 'color current shadow';
   currentColor.style.backgroundColor = customColor;
-  toggle = false;
 };
 
 drawCanvas(55, 30);
