@@ -25,6 +25,8 @@ h1 {
   width: 825px;
   margin: 0 auto;
   position: relative;
+  border: 1px solid #F1F1F3;
+
 }
 
 .pixelRow {

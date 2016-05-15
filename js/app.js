@@ -4,6 +4,8 @@ var toggle = true;
 var canvas = document.getElementById('canvas');
 var currentColor = document.getElementsByClassName('current')[0];
 currentColor.className = 'color current gridbg ' + brushColor;
+var shouldDraw = null;
+
 
 /* Draw the canvas based on the height and width given. Height determines the number of rows. Width determines how many pixels to put in each row. Add event listeners to each pixel. Toggle between colorPicker palette (true) and customPicker (false). */
 
@@ -17,20 +19,46 @@ var drawCanvas = function (width, height) {
       var pixel = document.createElement('div');
       pixel.className = 'pixel';
       pixelRow.appendChild(pixel);
-      pixel.addEventListener('mousedown', function(event) {
 
+      canvas.addEventListener('mousedown', function(event) {
         switch (toggle) {
           case true:
-            event.target.className = 'pixel ' + brushColor;
             event.target.removeAttribute('style');
-            break;
+            event.target.className = 'pixel ' + brushColor;
+          break;
           case false:
             event.target.className = 'pixel';
             event.target.style.backgroundColor = customColor;
             event.target.style.borderColor = customColor;
-            break;
+          break;
         }
       });
+
+      pixel.addEventListener('mousedown', function(event) {
+        shouldDraw = true;
+      });
+
+      pixel.addEventListener('mouseup', function(event) {
+        shouldDraw = false;
+      });
+
+      pixel.addEventListener('mouseenter', function(event) {
+        if (shouldDraw === true) {
+          switch (toggle) {
+            case true:
+              event.target.removeAttribute('style');
+              event.target.className = 'pixel ' + brushColor;
+            break;
+            case false:
+              event.target.className = 'pixel';
+              event.target.style.backgroundColor = customColor;
+              event.target.style.borderColor = customColor;
+            break;
+          }
+        }
+      }, false);
+
+
     }
   }
 };
