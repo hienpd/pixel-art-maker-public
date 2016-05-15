@@ -104,5 +104,5 @@ h1 {
 .gridbg {
   box-shadow: 2px 2px #E5E5E7, 0 0 1em #E5E5E7;
   background-image: url(../gridbg.png);
-  background-size: 10px
+  background-size: 10px;
 }
